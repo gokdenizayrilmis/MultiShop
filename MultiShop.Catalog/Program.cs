@@ -23,7 +23,6 @@ builder.Services.AddScoped<IDatabaseSettings>(sp =>
 });
 
 builder.Services.AddControllers();
-// Standard Swagger/OpenAPI registration to ensure UI is available at /swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -34,22 +33,14 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    // Ensure Swagger UI is available in Development
     app.UseSwagger();
     app.UseSwaggerUI();
-
-    // If AddOpenApi()/MapOpenApi() extension is available, keep it as well
-    try
-    {
-        app.MapOpenApi();
-    }
-    catch
-    {
-        // If MapOpenApi is not present at runtime, ignore — we already registered standard Swagger
-    }
+    app.MapOpenApi();
 }
-
-app.UseHttpsRedirection();
+else
+{
+    app.UseHttpsRedirection();
+}
 
 app.UseAuthorization();
 

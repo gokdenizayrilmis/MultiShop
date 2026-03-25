@@ -30,8 +30,11 @@ namespace MultiShop.Catalog.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateProductDetail(CreateProductDetailDto ProductDetailDto)
+        public async Task<IActionResult> CreateProductDetail([FromBody] CreateProductDetailDto ProductDetailDto)
         {
+            if (string.IsNullOrWhiteSpace(ProductDetailDto?.ProductId))
+                return BadRequest("ProductId is required in the request body.");
+
             await _ProductDetailService.CreateProductDetailAsync(ProductDetailDto);
             return Ok("Ürün Detayı Başarıyla Eklendi!");
         }
