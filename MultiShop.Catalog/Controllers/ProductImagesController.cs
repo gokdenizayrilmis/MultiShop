@@ -10,45 +10,45 @@ namespace MultiShop.Catalog.Controllers
     [Route("api/[controller]")]
     public class ProductImagesController : Controller
     {
-        private readonly IProductImageService _ProductImageService;
+        private readonly IProductImageService _productImageService;
 
         public ProductImagesController(IProductImageService productImageService)
         {
-            _ProductImageService = productImageService;
+            _productImageService = productImageService;
         }
 
         [HttpGet]
         public async Task<IActionResult> ProductImageList()
         {
-            var categories = await _ProductImageService.GetAllProductImageAsync();
+            var categories = await _productImageService.GetAllProductImageAsync();
             return Ok(categories);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductImageById(string id)
         {
-            var value = await _ProductImageService.GetByIdProductImageAsync(id);
+            var value = await _productImageService.GetByIdProductImageAsync(id);
             return Ok(value);
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateProductImage(CreateProductImageDto ProductImageDto)
         {
-            await _ProductImageService.CreateProductImageAsync(ProductImageDto);
+            await _productImageService.CreateProductImageAsync(ProductImageDto);
             return Ok("Ürün Resmi Başarıyla Eklendi!");
         }
 
         [HttpPut]
         public async Task<IActionResult> UpdateProductImage(UpdateProductImageDto ProductImageDto)
         {
-            await _ProductImageService.UpdateProductImageAsync(ProductImageDto);
+            await _productImageService.UpdateProductImageAsync(ProductImageDto);
             return Ok("Ürün Resmi Başarıyla Güncellendi!");
         }
 
         [HttpDelete]
         public async Task<IActionResult> DeleteProductImage(string id)
         {
-            await _ProductImageService.DeleteProductImageAsync(id);
+            await _productImageService.DeleteProductImageAsync(id);
             return Ok("Ürün Resmi Başarıyla Silindi!");
         }
     }
