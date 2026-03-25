@@ -37,7 +37,7 @@ namespace MultiShop.Catalog.Services.ProductImageServices
             return _mapper.Map<List<ResultProductImageDto>>(values);
         }
 
-        public async Task<GetByIdProductImageDto> GetByIdProductImageDtoAsync(string id)
+        public async Task<GetByIdProductImageDto> GetByIdProductImageAsync(string id)
         {
             var value = await _productImageCollection.Find<ProductImage>(x => x.ProductImageId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdProductImageDto>(value);

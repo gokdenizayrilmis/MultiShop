@@ -29,7 +29,7 @@ namespace MultiShop.Catalog.Services.CategoryServices
         {
             await _categoryCollection.DeleteOneAsync(x => x.CategoryId == id);
         }
-        public async Task<GetByIdCategoryDto> GetByIdCategoryDtoAsync(string id)
+        public async Task<GetByIdCategoryDto> GetByIdCategoryAsync(string id)
         {
             var values = await _categoryCollection.Find<Category>(x=> x.CategoryId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdCategoryDto>(values);
