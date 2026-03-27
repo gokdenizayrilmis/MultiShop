@@ -16,7 +16,7 @@ namespace MultiShop.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers
             _repository = repository;
         }
 
-        public async Task Handl(CreateOrderDetailCommand handler) 
+        public async Task Handle(CreateOrderDetailCommand handler) 
         {
             await _repository.CreateAsync(new OrderDetail
             {
