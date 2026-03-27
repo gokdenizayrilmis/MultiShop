@@ -1,0 +1,18 @@
+﻿using MediatR;
+using MultiShop.Order.Application.Features.Mediator.Results;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace MultiShop.Order.Application.Features.Mediator.Queries.OrderingQueries
+{
+    public class GetOrderingByIdQuery : IRequest<GetOrderingByIdQueryResult>
+    {
+        public int Id { get; set; }
+
+        public GetOrderingByIdQuery(int id)
+        {
+            Id = id;
+        }
+    }
+}
