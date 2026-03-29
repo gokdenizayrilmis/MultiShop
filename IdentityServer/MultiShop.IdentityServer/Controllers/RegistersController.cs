@@ -27,7 +27,7 @@ namespace MultiShop.IdentityServer.Controllers
                 Name = userRegisterDto.Name,
                 Surname = userRegisterDto.Surname
             };
-            var result = await _userManager.CreateAsync(values, userRegisterDto.Password);
+            var result = await _userManager.CreateAsync(values, userRegisterDto.Password); //şifre en az 6 karakter, bir büyük harf, bir küçük harf, bir rakam içermelidir.
             if (result.Succeeded)
             {
                 return Ok("Kullanıcı Başarıyla Eklendi!");

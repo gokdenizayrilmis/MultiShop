@@ -1,0 +1,9 @@
+# Use this workspace to collaborate
+workspace:
+  id: ba3a9202-6598-4fd9-8b75-edcd64bf962a
+
+localResources:
+  specs:
+    - ..\Services\Catalog\MultiShop.Catalog\obj\Debug\net10.0\EndpointInfo\MultiShop.Catalog.json
+    - ..\Services\Discount\MultiShop.Discount\obj\Debug\net10.0\EndpointInfo\MultiShop.Discount.json
+    - ..\Services\Order\Presentation\MultiShop.Order.WebApi\obj\Debug\net10.0\EndpointInfo\MultiShop.Order.WebApi.json
