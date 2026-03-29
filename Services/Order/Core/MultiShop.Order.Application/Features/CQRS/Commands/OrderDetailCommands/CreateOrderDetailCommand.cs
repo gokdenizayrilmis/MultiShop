@@ -1,5 +1,4 @@
-﻿using MultiShop.Order.Domain.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -13,6 +12,5 @@ namespace MultiShop.Order.Application.Features.CQRS.Commands.OrderDetailCommands
         public int ProductAmount { get; set; }
         public decimal ProductTotalPrice { get; set; }
         public int OrderingId { get; set; }
-        public Ordering Ordering { get; set; }
     }
 }
