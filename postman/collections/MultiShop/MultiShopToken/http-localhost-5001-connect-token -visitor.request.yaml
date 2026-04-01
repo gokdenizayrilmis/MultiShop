@@ -1,0 +1,11 @@
+$kind: http-request
+name: http://localhost:5001/connect/token -visitor
+url: http://localhost:5001/connect/token
+method: POST
+body:
+  type: urlencoded
+  content:
+    client_id: MultiShopVisitorID
+    client_secret: multishopsecret
+    grant_type: client_credentials
+order: 3562898919839286
