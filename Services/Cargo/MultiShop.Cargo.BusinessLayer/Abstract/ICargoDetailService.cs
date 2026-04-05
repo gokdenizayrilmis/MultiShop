@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MultiShop.Cargo.BusinessLayer.Abstract
 {
-    internal interface ICargoDetailService : IGenericService<CargoDetail>
+    public interface ICargoDetailService : IGenericService<CargoDetail>
     {
     }
 }
