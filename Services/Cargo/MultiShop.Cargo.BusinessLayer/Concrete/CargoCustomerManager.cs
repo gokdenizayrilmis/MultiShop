@@ -9,7 +9,7 @@ namespace MultiShop.Cargo.BusinessLayer.Concrete
 {
     public class CargoCustomerManager : ICargoCustomerService
     {
-        private readonly ICargoCustomerDal cargoCustomerDal
+        private readonly ICargoCustomerDal cargoCustomerDal;
         public CargoCustomerManager(ICargoCustomerDal cargoCustomerDal)
         {
             this.cargoCustomerDal = cargoCustomerDal;
