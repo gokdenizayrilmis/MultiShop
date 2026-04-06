@@ -10,7 +10,10 @@ namespace MultiShop.Order.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=...;Database=MultiShopOrderDb;Trusted_Connection=True; initial Catalog=MultiShopOrderDb");
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Server=localhost,1440;Initial Catalog=MultiShopOrderDb;User Id=sa;Password=123456aA*;TrustServerCertificate=True");
+            }
         }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<OrderDetail> OrderDetails{ get; set; }

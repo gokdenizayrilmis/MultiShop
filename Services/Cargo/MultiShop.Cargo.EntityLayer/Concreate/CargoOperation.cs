@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace MultiShop.Cargo.EntityLayer.Concreate
+{
+    public class CargoOperation
+    {
+        public int CargoOperationId { get; set; }
+        public string Barcode { get; set; }
+        public string Description { get; set; }
+        public DateTime OperationDate { get; set; }
+    }
+}

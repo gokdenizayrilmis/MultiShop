@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MultiShop.Catalog.Dtos.ProductDetailDtos;
 using MultiShop.Catalog.Dtos.ProductImageDtos;
 using MultiShop.Catalog.Services.ProductDetailServices;
@@ -6,6 +7,7 @@ using MultiShop.Catalog.Services.ProductImageServices;
 
 namespace MultiShop.Catalog.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ProductImagesController : Controller

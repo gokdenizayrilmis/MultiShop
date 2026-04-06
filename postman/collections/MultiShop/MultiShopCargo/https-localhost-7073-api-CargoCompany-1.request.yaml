@@ -1,0 +1,12 @@
+$kind: http-request
+name: https://localhost:7073/api/CargoCompany
+url: https://localhost:7073/api/CargoCompany
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"CargoCompanyName\":\"Aras Kargo\"\r
+
+    }"
+order: 2052043304617724

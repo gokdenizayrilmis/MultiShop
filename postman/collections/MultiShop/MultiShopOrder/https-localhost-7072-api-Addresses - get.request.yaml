@@ -1,0 +1,8 @@
+$kind: http-request
+name: https://localhost:7072/api/Addresses - get
+url: https://localhost:7072/api/Addresses
+method: GET
+auth:
+  type: oauth2
+examples: .resources/https-localhost-7072-api-Addresses - get.resources/examples
+order: 1774868935998

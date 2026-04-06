@@ -1,0 +1,8 @@
+$kind: http-request
+name: https://localhost:7071/api/Discounts - get
+url: https://localhost:7071/api/Discounts
+method: GET
+auth:
+  credentials: []
+  type: oauth2
+order: 1774867501377
