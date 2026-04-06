@@ -9,6 +9,8 @@
             _httpcontextAccessor = httpContextAccessor;
         }
 
-        public string GetUserId => _httpcontextAccessor.HttpContext.User.FindFirst("sub").Value; 
+        public string? GetUserId =>
+            _httpcontextAccessor.HttpContext?.User?.FindFirst("sub")?.Value
+            ?? _httpcontextAccessor.HttpContext?.User?.FindFirst("client_id")?.Value;
     }
 }

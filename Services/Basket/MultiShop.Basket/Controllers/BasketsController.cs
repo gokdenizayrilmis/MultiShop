@@ -23,14 +23,22 @@ namespace MultiShop.Basket.Controllers
         [HttpGet]
         public async Task<IActionResult> GetMyBasketDetail()
         {
-            var values = await _basketService.GetBasket(_loginService.GetUserId);
+            var userId = _loginService.GetUserId;
+            if (string.IsNullOrWhiteSpace(userId))
+                return Unauthorized();
+
+            var values = await _basketService.GetBasket(userId);
             return Ok(values);
         }
 
         [HttpPost]
         public async Task<IActionResult> SaveMyBasket(BasketTotalDto basketTotalDto)
         {
-            basketTotalDto.UserId = _loginService.GetUserId;
+            var userId = _loginService.GetUserId;
+            if (string.IsNullOrWhiteSpace(userId))
+                return Unauthorized();
+
+            basketTotalDto.UserId = userId;
             await _basketService.SaveBasket(basketTotalDto);
             return Ok(basketTotalDto);
         }
@@ -38,7 +46,11 @@ namespace MultiShop.Basket.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteMyBasket()
         {
-            await _basketService.DeleteBasket(_loginService.GetUserId);
+            var userId = _loginService.GetUserId;
+            if (string.IsNullOrWhiteSpace(userId))
+                return Unauthorized();
+
+            await _basketService.DeleteBasket(userId);
             return Ok("Sepet Başarıyla Silindi!");
 
         }

@@ -1,0 +1,42 @@
+$kind: http-request
+name: https://localhost:7074/api/Baskets
+url: https://localhost:7074/api/Baskets
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"UserId\" : \"f65d2b00-51e6-43a9-9785-7fca46147aec\",\r
+
+    \    \"DiscountCode\" : \"yok\",\r
+
+    \    \"DiscountRate\" : 0,\r
+
+    \    \"BasketItems\" : [{\r
+
+    \        \"ProductId\" : \"casper\",\r
+
+    \        \"ProductName\" : \"bilgisayar\",\r
+
+    \        \"Quantity\" : 1,\r
+
+    \        \"Price\" : 1500\r
+
+    \    },\r
+
+    \    {\r
+
+    \        \"ProductId\" : \"abc1sd\",\r
+
+    \        \"ProductName\" : \"telefon\",\r
+
+    \        \"Quantity\" : 1,\r
+
+    \        \"Price\" : 1500\r
+
+    \    }]\r
+
+    }"
+auth:
+  type: oauth2
+order: 2000

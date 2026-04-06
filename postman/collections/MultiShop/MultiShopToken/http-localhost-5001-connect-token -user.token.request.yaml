@@ -1,0 +1,20 @@
+$kind: http-request
+name: http://localhost:5001/connect/token -user.token
+url: http://localhost:5001/connect/token
+method: POST
+body:
+  type: urlencoded
+  content:
+    - key: client_id
+      value: MultiShopAdminID
+    - key: client_secret
+      value: multishopsecret
+    - key: grant_type
+      value: client_credentials
+    - key: username
+      value: Canıtın
+    - key: password
+      value: 111111aA
+    - key: ""
+      value: ""
+order: 4207911676929809

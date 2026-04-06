@@ -1,0 +1,30 @@
+$kind: http-request
+name: https://localhost:7074/api/Baskets
+url: https://localhost:7074/api/Baskets
+method: GET
+body:
+  type: json
+  content: "{\r
+
+    \    \"UserId\" : \"f65d2b00-51e6-43a9-9785-7fca46147aec\",\r
+
+    \    \"DiscountCode\" : \"yok\",\r
+
+    \    \"DiscountRate\" : 0,\r
+
+    \    \"BasketItems\" : [{\r
+
+    \        \"ProductId\" : \"abc1\",\r
+
+    \        \"ProductName\" : \"Bilgisayar\",\r
+
+    \        \"Quantity\" : 1,\r
+
+    \        \"Price\" : 1500\r
+
+    \    }]\r
+
+    }"
+auth:
+  type: oauth2
+order: 1778
