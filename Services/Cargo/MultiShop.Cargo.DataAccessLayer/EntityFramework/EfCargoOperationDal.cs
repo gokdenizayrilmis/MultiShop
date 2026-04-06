@@ -8,9 +8,9 @@ using System.Text;
 
 namespace MultiShop.Cargo.DataAccessLayer.EntityFramework
 {
-    public class EfCargoOperation : GenericRepository<CargoOperation>, ICargoOperationDal
+    public class EfCargoOperationDal : GenericRepository<CargoOperation>, ICargoOperationDal
     {
-            public EfCargoOperation(CargoContext context) : base(context)
+            public EfCargoOperationDal(CargoContext context) : base(context)
             {
             }
     }

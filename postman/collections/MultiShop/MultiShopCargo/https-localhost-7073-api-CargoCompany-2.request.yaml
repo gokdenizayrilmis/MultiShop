@@ -1,0 +1,14 @@
+$kind: http-request
+name: https://localhost:7073/api/CargoCompany
+url: https://localhost:7073/api/CargoCompany
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"CargoCompanyId\":1,\r
+
+    \    \"CargoCompanyName\":\"DHL Kargo\"\r
+
+    }"
+order: 3149614747374601

@@ -1,0 +1,7 @@
+$kind: http-request
+name: https://localhost:7073/api/CargoCompany
+url: https://localhost:7073/api/CargoCompany
+method: GET
+auth:
+  type: oauth2
+order: 1775386563375
