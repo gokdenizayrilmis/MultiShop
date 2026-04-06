@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace MultiShop.Basket.Services
 {
-    public class BasketService : IBaskerService
+    public class BasketService : IBasketService
     {
         private readonly RedisService _redisService;
 
