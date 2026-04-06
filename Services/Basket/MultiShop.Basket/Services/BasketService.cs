@@ -35,9 +35,9 @@ namespace MultiShop.Basket.Services
             }
         }
 
-        public Task SaveBasket(BasketTotalDto basket)
+        public async Task SaveBasket(BasketTotalDto basket)
         {
-            throw new NotImplementedException();
+            await _redisService.GetDb().StringSetAsync(basket.UserId, JsonSerializer.Serialize(basket));
         }
     }
 }
